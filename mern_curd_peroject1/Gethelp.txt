@@ -1,0 +1,62 @@
+=> RUN THE APPLICATION
+# Terminal 1 - Backend
+cd backend
+npm run dev          # -> http://localhost:5000
+
+# Terminal 2 - Frontend
+cd frontend
+npm start            # -> http://localhost:3000
+
+
+Project Structure:-
+mern-crud/
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   ├── models/
+│   │   └── Item.js
+│   ├── routes/
+│   │   └── itemRoutes.js
+│   ├── controllers/
+│   │   └── itemController.js
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+└── frontend/
+    ├── public/
+    ├── src/
+    │   ├── components/
+    │   │   ├── ItemList.jsx
+    │   │   ├── ItemForm.jsx
+    │   │   └── EditItem.jsx
+    │   ├── api/
+    │   │   └── itemApi.js
+    │   ├── App.jsx
+    │   ├── App.css
+    │   └── index.js
+    └── package.json
+
+
+
+ARCHITECTURE FLOW
+┌────────────┐  HTTP/JSON   ┌────────────────┐  Mongoose  ┌─────────┐
+│   React    │ ◄──────────► │  Express API   │ ◄────────► │ MongoDB │
+│ (Port 3000)│   Axios      │  (Port 5000)   │            │         │
+└────────────┘              └────────────────┘            └─────────┘
+   FRONTEND                    BACKEND                     DATABASE
+
+
+Prerequisites: Make sure Node.js (v16+) and MongoDB are installed and running locally (or update MONGO_URI with a MongoDB Atlas connection string). This gives you a fully functional Create, Read, Update, and Delete application across the full MERN stack.
+
+API ENDPOINTS SUMMARY
+| Method   | Endpoint            | Action             |
+|----------|---------------------|--------------------|
+| GET      | /api/items          | Fetch all items    |
+| GET      | /api/items/:id      | Fetch single item  |
+| POST     | /api/items          | Create new item    |
+| PUT      | /api/items/:id      | Update item        |
+| DELETE   | /api/items/:id      | Delete item        |
+
+
+

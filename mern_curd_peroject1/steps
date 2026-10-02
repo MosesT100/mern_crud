@@ -1,0 +1,52 @@
+1 - BACKEND
+1.1 Initialize & Install
+1.2 .env
+1.3 config/db.js - MongoDB Connection
+1.4 models/Item.js - Mongoose Model
+1.5 controllers/itemController.js - CRUD Logic
+1.6 routes/itemRoutes.js - Express Router
+1.7 server.js - Entry Point
+1.8 package.json - Add Script
+
+
+
+
+
+
+2 - FRONTEND (React)
+2.1 Initialize
+2.2 src/api/itemApi.js - Axios Helper
+2.3 src/components/ItemForm.jsx - Create Form
+2.4 src/components/EditItem.jsx - Update Form
+2.5 src/components/ItemList.jsx - Read & Delete
+2.6 src/App.jsx - Router Setup
+2.7 src/App.css - Basic Styling
+
+
+
+3 - RUN THE APPLICATION
+
+
+4 - API ENDPOINTS SUMMARY
+API ENDPOINTS SUMMARY
+| Method   | Endpoint            | Action             |
+|----------|---------------------|--------------------|
+| GET      | /api/items          | Fetch all items    |
+| GET      | /api/items/:id      | Fetch single item  |
+| POST     | /api/items          | Create new item    |
+| PUT      | /api/items/:id      | Update item        |
+| DELETE   | /api/items/:id      | Delete item        |
+
+
+
+5 - ARCHITECTURE FLOW
+┌────────────┐  HTTP/JSON   ┌────────────────┐  Mongoose  ┌─────────┐
+│   React    │ ◄──────────► │  Express API   │ ◄────────► │ MongoDB │
+│ (Port 3000)│   Axios      │  (Port 5000)   │            │         │
+└────────────┘              └────────────────┘            └─────────┘
+   FRONTEND                    BACKEND                     DATABASE
+
+
+"Prerequisites: Make sure Node.js (v16+) and MongoDB are installed and running locally (or update MONGO_URI with a MongoDB Atlas connection string). This gives you a fully functional Create, Read, Update, and Delete application across the full MERN stack."
+
+
